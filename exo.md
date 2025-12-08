@@ -10,7 +10,7 @@ Créez un tuple des noms de familles des personnes invitées pour noël, la list
 liste = ("noël-collin", "grinch", "payne")
 ~~~
 
-# Etoiles : 3 <-> 1: Valeurs Erronées.
+# Etoiles : 3 <-> 1: Exercice racine cubique de 3
 
 ## Consignes
 
@@ -54,4 +54,19 @@ def tup(st: str) -> tuple:
     return a
 
 t1 = tup("J'utilise arch linux")
+~~~
+
+# Etoiles : 2 <-> 1: La pizza c'est trop bon
+## Consignes
+
+Créez une fonction qui renvoie l'aire, le périmètre, de chaque part d'une pizza découpée en N parts de rayon C.
+
+## Réponse
+
+~~~py
+import math
+
+def parts(N, C):
+    return ((math.pi * C * C)/N, (2 * math.pi * C)/N)
+
 ~~~
