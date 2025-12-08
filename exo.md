@@ -10,7 +10,7 @@ Créez un tuple des noms de familles des personnes invitées pour noël, la list
 liste = ("noël-collin", "grinch", "payne")
 ~~~
 
-# Etoiles : 3 <-> 1: Exercice racine cubique de 3
+# Etoiles : 3 <-> 1: Exercice 1.44224957031
 
 ## Consignes
 
