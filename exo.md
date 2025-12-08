@@ -21,15 +21,15 @@ Voici le code qu'il a utilisé
 ~~~py
 
 def tup(st):
-    a = (,)
+    a = ('',)
     for lettre in st:
         a = a + (lettre,)
     return a
 
-t1 = tup("J'aime La Pizza")
+t1 = tup("J'utilise arch linux")
 ~~~
 
-Modifiez la fonction et ajoutez des tests et un docstring.
+Documentez et spécifiez la fonction.
 
 ## Réponse
 ~~~py
@@ -48,8 +48,10 @@ def tup(st: str) -> tuple:
         tuple: Un tuple contenant tous les caractères de la chaîne, précédés d'un élément vide.
     """
     assert len(st) >= 1, "Le str devrait avoir une longueur supérieure ou égale à 1"
-    a = (,)
+    a = ('',)
     for lettre in st:
         a = a + (lettre,)
     return a
+
+t1 = tup("J'utilise arch linux")
 ~~~
