@@ -110,7 +110,7 @@ De quelle forme est le p-uplet renvoyé?
 
 `(<class 'qiskit.QuantumCircuit'>, <class 'str'>, <class 'str'>)`
 
-# Etoiles : 2 <-> 3: Rotation
+# Etoiles : 2 <-> 3: Rotation de p-uplet
 
 ## Consignes
 
@@ -127,4 +127,18 @@ def retourner(puplet: tuple) -> tuple:
     for i in range(1, len(puplet), -1):
         out = (out, i);
     return out
+~~~
+
+
+# Etoiles : 1 <-> 2: Alpha et Beta
+
+## Consignes
+
+Donnez une fonction qui renvoie alpha et beta partant de a, b, c, et la fonction
+
+## Réponse
+
+~~~py
+def racines(a, b, c, fn):
+    return ((-b)/(2*a), fn((-b)/(2*a)));
 ~~~
