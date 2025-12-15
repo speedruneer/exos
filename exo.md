@@ -109,3 +109,22 @@ De quelle forme est le p-uplet renvoyé?
 ## Réponse
 
 `(<class 'qiskit.QuantumCircuit'>, <class 'str'>, <class 'str'>)`
+
+# Etoiles : 2 <-> 3: Rotation
+
+## Consignes
+
+Créez une fonction qui renvoie un p-uplet retourné.
+
+```python
+a = fonction((1, 2, 3)) # renvoie (3, 2, 1)
+```
+
+## Réponse
+~~~py
+def retourner(puplet: tuple) -> tuple:
+    out = ()
+    for i in range(1, len(puplet), -1):
+        out = (out, i);
+    return out
+~~~
