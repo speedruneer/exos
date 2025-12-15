@@ -177,11 +177,31 @@ import math
 def decimale_de_pi(n: int):
     n = int(n)
     pi2 = str(math.pi)
-    if n > len(pi2):
+    if n+1 > len(pi2):
         return pi2
-    return pi2[n]
+    return (pi2[n], pi2[n+1])
 print(decimale_de_pi(152))
 ~~~
 
 ## Réponse
-`8`
+`8, 7`
+
+# Etoiles : 2 <-> 4: Roulette
+## Consignes
+Jeu de roulette européenne
+
+Créez une fonction qui renvoie un tuple de la forme (x, y) avec x étant un nombre sur une roulette et y étant la couleur (0/1/2)
+
+## Réponse
+~~~py
+import random
+
+def roulette_europeenne():
+    x = random.randint(0, 36)
+    if x == 0:
+        y = 0
+    else:
+        rouges = {1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36}
+        y = 1 if x in rouges else 2
+    return (x, y)
+~~~
