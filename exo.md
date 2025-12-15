@@ -10,7 +10,7 @@ Créez un tuple des noms de familles des personnes invitées pour noël, la list
 liste = ("noël-collin", "grinch", "payne")
 ~~~
 
-# Etoiles : 3 <-> 1: Exercice 1.44224957031
+# Etoiles : 3 <-> 1: Système D'exploitation
 
 ## Consignes
 
@@ -204,4 +204,14 @@ def roulette_europeenne():
         rouges = {1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36}
         y = 1 if x in rouges else 2
     return (x, y)
+~~~
+
+# Etoiles : 1 <-> 4: Exercice 1.44224957031
+## Consignes
+Faites une fonction qui renvoie la racine cubique, la racine carrée, le carré et le cube de N
+## Réponse
+~~~py
+import math
+def truc(n):
+    return (math.sqrt(math.sqrt(n)), math.sqrt(n), n*n, n*n*n)
 ~~~
