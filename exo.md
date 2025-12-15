@@ -70,3 +70,42 @@ def parts(N, C):
     return ((math.pi * C * C)/N, (2 * math.pi * C)/N)
 
 ~~~
+
+# Etoiles : 2 <-> 2: Exercice machin
+## Consignes
+
+~~~py
+def store_two_classics(val1: int, val2: int) -> tuple[qiskit.QuantumCircuit, str, str]:
+    """
+    Generates a Quantum Circuit which stores two classical integers
+    Returns the circuit and binary representation of the integers
+    """
+    x, y = bin(val1)[2:], bin(val2)[2:]  # Remove leading '0b'
+
+    # Ensure that both strings are of the same length
+    if len(x) > len(y):
+        y = y.zfill(len(x))
+    else:
+        x = x.zfill(len(y))
+
+    # We need (3 * number of bits in the larger number)+1 qBits
+    # The second parameter is the number of classical registers, to measure the result
+    circuit = qiskit.QuantumCircuit((len(x) * 3) + 1, len(x) + 1)
+
+    # We are essentially "not-ing" the bits that are 1
+    # Reversed because it's easier to perform ops on more significant bits
+    for i in range(len(x)):
+        if x[::-1][i] == "1":
+            circuit.x(i)
+    for j in range(len(y)):
+        if y[::-1][j] == "1":
+            circuit.x(len(x) + j)
+
+    return circuit, x, y
+~~~
+
+De quelle forme est le p-uplet renvoyé?
+
+## Réponse
+
+`(<class 'qiskit.QuantumCircuit'>, <class 'str'>, <class 'str'>)`
