@@ -124,8 +124,8 @@ a = fonction((1, 2, 3)) # renvoie (3, 2, 1)
 ~~~py
 def retourner(puplet: tuple) -> tuple:
     out = ()
-    for i in range(1, len(puplet), -1):
-        out = (out, i);
+    for i in range(len(puplet)):
+        out = (out, len(puplet) - i);
     return out
 ~~~
 
