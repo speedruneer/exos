@@ -170,7 +170,7 @@ def shadock(N):
 
 # Etoiles : 1 <-> 3: Deviner
 ## Consignes
-Devinez la valeur de e
+Devinez la valeur de renvoyée dans la console
 ~~~py
 import math
 
