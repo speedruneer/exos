@@ -126,7 +126,7 @@ def retourner(puplet: tuple) -> tuple:
     out = ()
     for i in range(len(puplet)):
         out = (out, len(puplet) - i);
-    return out
+    return out;
 ~~~
 
 
@@ -141,4 +141,29 @@ Donnez une fonction qui renvoie alpha et beta partant de a, b, c, et la fonction
 ~~~py
 def racines(a, b, c, fn):
     return ((-b)/(2*a), fn((-b)/(2*a)));
+~~~
+
+# Etoiles : 3 <-> 2: Les shadocks
+## Consignes
+Renvoyer le nombre d'entrée N en shadock
+GA = 0
+BU = 1
+ZO = 2
+MEU = 3
+
+base 4
+
+## Réponse
+~~~py
+def shadock(N):
+    mots = ['GA', 'BU', 'ZO', 'MEU']  # correspondance base 4
+    if N == 0:
+        return mots[0]
+    
+    resultat = []
+    while N > 0:
+        N, reste = divmod(N, 4)
+        resultat.append(mots[reste])
+    
+    return ''.join(reversed(resultat))
 ~~~
