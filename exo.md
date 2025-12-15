@@ -181,5 +181,9 @@ def decimale_de_pi(n: int):
     else:
         print("PI AVEC 204 DECIMALES CAR MAX")
         return print(format(math.pi, ".204f"))
+    
+print(decimale_de_pi(152))
 ~~~
+
 ## Réponse
+`8`
