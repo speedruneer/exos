@@ -167,3 +167,19 @@ def shadock(N):
     
     return ''.join(reversed(resultat))
 ~~~
+
+# Etoiles : 1 <-> 3: Deviner
+## Consignes
+Devinez la valeur de e
+~~~py
+import math
+
+def decimale_de_pi(n: int):
+    n = int(n)
+    if n <= 204:
+        return print(format(math.pi, f".{n}f"))
+    else:
+        print("PI AVEC 204 DECIMALES CAR MAX")
+        return print(format(math.pi, ".204f"))
+~~~
+## Réponse
